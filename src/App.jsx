@@ -1,9 +1,10 @@
 import React from "react";
+import TodoList from "./Components/todolist/TodoList";
 
 const App = () => {
   return (
     <div>
-      <h2>sadasd</h2>
+      <TodoList></TodoList>
     </div>
   );
 };
