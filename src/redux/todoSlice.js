@@ -15,9 +15,9 @@ const todoSlice = createSlice({
       state.currentCount++; 
     },
     removeTodo: (state, action) => {
-      state.list = state.list.filter(todo => todo.id !== action.payload);
       const removedTodo = state.list.find(todo => todo.id === action.payload);
       if (removedTodo) {
+        state.list = state.list.filter(todo => todo.id !== action.payload);
         if (removedTodo.completed) {
           state.completedCount--; 
         } else {
@@ -25,6 +25,7 @@ const todoSlice = createSlice({
         }
       }
     },
+    
     toggleTodo: (state, action) => {
       const todo = state.list.find(todo => todo.id === action.payload);
       if (todo) {

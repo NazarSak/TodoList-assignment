@@ -1,18 +1,28 @@
-import React from "react";
-import { useForm } from '@mantine/form';
+import React, { useState } from "react";
+import { Button, TextInput } from "@mantine/core";
+import { Form } from "./form.styled";
 
-const Form = () => {
+const FormTask = ({ handleSubmit, text, setText }) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <Form onSubmit={handleSubmit}>
+      <TextInput
         type="text"
+        name="text"
         value={text}
         required={true}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit">Add Todo</button>
-    </form>
+      <Button
+        type="submit"
+        variant="filled"
+        color="orange"
+        size="md"
+        radius="md"
+      >
+        Add Todo
+      </Button>
+    </Form>
   );
 };
 
-export default Form;
+export default FormTask;
