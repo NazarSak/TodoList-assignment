@@ -4,11 +4,11 @@ export const FilterCount = styled.div`
   margin-bottom: 10px;
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   position: relative;
 `;
 
-const CountBadge = styled.span`
+export const CountBadge = styled.span`
   position: absolute;
   top: -8px;
   right: -8px;
